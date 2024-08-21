@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notion Language Hub Setup</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f8f3e0, #d8e2dc); /* Soft pastel gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            padding: 30px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly translucent white background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid #c8d8e4; /* Light blue border */
+            position: relative;
+            z-index: 1; /* Ensure the container is above the background */
+        }
+        h1 {
+            color: #6b8e23; /* Olive green color */
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Garamond', serif; /* Elegant font for header */
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #4a7c59; /* Earthy green color */
+            background: #f0f8f4; /* Light greenish background for labels */
+            padding: 5px;
+            border-radius: 5px;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 16px;
+            background: #fafafa; /* Light gray background for inputs */
+        }
+        .form-group input[type="submit"] {
+            background-color: #6ca0a3; /* Soft teal color */
+            color: #fff;
+            border: none;
+            cursor: pointer;
+            font-size: 18px;
+            transition: background-color 0.3s;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        .form-group input[type="submit"]:hover {
+            background-color: #5b8a8e; /* Slightly darker teal for hover effect */
+        }
+        .form-group input[type="submit"]:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(108, 166, 166, 0.5); /* Soft teal focus effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Notion Language Hub Setup</h1>
+        <form id="setup-form" method="POST" action="/schedule_emails">
+            <div class="form-group">
+                <label for="notion_token">Notion Integration Token:</label>
+                <input type="text" id="notion_token" name="notion_token" placeholder="Enter Notion token" required aria-label="Notion Integration Token">
+            </div>
+            <div class="form-group">
+                <label for="goals_db_id">Goals Database ID:</label>
+                <input type="text" id="goals_db_id" name="goals_db_id" placeholder="Enter Goals DB ID" required aria-label="Goals Database ID">
+            </div>
+            <div class="form-group">
+                <label for="certification_db_id">Certification Database ID:</label>
+                <input type="text" id="certification_db_id" name="certification_db_id" placeholder="Enter Certification DB ID" required aria-label="Certification Database ID">
+            </div>
+            <div class="form-group">
+                <label for="vocab_db_ids">Vocabulary Database IDs (comma-separated for multiple languages):</label>
+                <input type="text" id="vocab_db_ids" name="vocab_db_ids" placeholder="Enter Vocabulary DB IDs, separated by commas" required aria-label="Vocabulary Database IDs">
+            </div>
+            <div class="form-group">
+                <label for="grammar_db_ids">Grammar Database IDs (comma-separated for multiple languages):</label>
+                <input type="text" id="grammar_db_ids" name="grammar_db_ids" placeholder="Enter Grammar DB IDs, separated by commas" required aria-label="Grammar Database IDs">
+            </div>
+            <div class="form-group">
+                <label for="daily_log_db_id">Daily Log Database ID:</label>
+                <input type="text" id="daily_log_db_id" name="daily_log_db_id" placeholder="Enter Daily Log DB ID" required aria-label="Daily Log Database ID">
+            </div>
+            <div class="form-group">
+                <label for="time_dist_db_id">Time Distribution Database ID:</label>
+                <input type="text" id="time_dist_db_id" name="time_dist_db_id" placeholder="Enter Time Distribution DB ID" required aria-label="Time Distribution Database ID">
+            </div>
+            <div class="form-group">
+                <label for="daily_time_spent_db_id">Daily Time Spent Database ID:</label>
+                <input type="text" id="daily_time_spent_db_id" name="daily_time_spent_db_id" placeholder="Enter Daily Time Spent DB ID" required aria-label="Daily Time Spent Database ID">
+            </div>
+            <div class="form-group">
+                <label for="watchlist_db_id">Watchlist Database ID:</label>
+                <input type="text" id="watchlist_db_id" name="watchlist_db_id" placeholder="Enter Watchlist DB ID" required aria-label="Watchlist Database ID">
+            </div>
+            <div class="form-group">
+                <label for="book_log_db_id">Book Log Database ID:</label>
+                <input type="text" id="book_log_db_id" name="book_log_db_id" placeholder="Enter Book Log DB ID" required aria-label="Book Log Database ID">
+            </div>
+            <div class="form-group">
+                <label for="communities_db_id">Communities Database ID:</label>
+                <input type="text" id="communities_db_id" name="communities_db_id" placeholder="Enter Communities DB ID" required aria-label="Communities Database ID">
+            </div>
+            <div class="form-group">
+                <label for="recipient_email">Recipient Email:</label>
+                <input type="email" id="recipient_email" name="recipient_email" placeholder="Enter recipient's email" required aria-label="Recipient Email">
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

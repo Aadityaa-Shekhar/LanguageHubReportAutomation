@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Submission</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #f8f3e0, #d8e2dc); /* Soft pastel gradient background */
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 30px auto;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.9); /* Slightly translucent white background */
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            border: 1px solid #c8d8e4; /* Light blue border */
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+        h1 {
+            color: #6b8e23; /* Olive green color */
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            font-family: 'Garamond', serif; /* Elegant font for header */
+        }
+        .message {
+            background-color: #fff; /* White background */
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #6ca0a3; /* Soft teal color */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        .button:hover {
+            background-color: #5b8a8e; /* Slightly darker teal for hover effect */
+        }
+        .button:focus {
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(108, 166, 166, 0.5); /* Soft teal focus effect */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Submission Status</h1>
+        <div class="message">
+            {% if recipient_email %}
+                <h2>Thank you for your submission!</h2>
+                <p>Your data has been received, and an email with the details has been sent to <strong>{{ recipient_email }}</strong>.</p>
+            {% else %}
+                <h2>Submission Failed</h2>
+                <p>There was an error processing your submission. Please try again later.</p>
+            {% endif %}
+            <a href="/" class="button">Go Back to Home</a>
+        </div>
+    </div>
+</body>
+</html>
